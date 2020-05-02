@@ -58,6 +58,10 @@ namespace LearnCsharp
                 else
                 {
                     Console.WriteLine("Не повезло, пробуй ещё раз");
+                    Console.WriteLine("1 число было загадано - "+value1); 
+                    Console.WriteLine("2 число было загадано - "+value2);
+                    Console.WriteLine("3 число было загадано - "+value3);
+                    Console.WriteLine("Тыкай Enter, чтобы попытать счастье ещё раз!");
                 }
 
 
