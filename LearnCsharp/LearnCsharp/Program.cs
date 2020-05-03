@@ -13,36 +13,33 @@ namespace LearnCsharp
             while(true)
             {
                 Console.Clear();
-                Console.WriteLine("Привет! Как тебя зовут?");
+                Console.WriteLine("What is your name?");
                 var name = Console.ReadLine();
-                Console.WriteLine("Привет, " + name + "!");
-                Console.WriteLine("Я сейчас загадаю три целых числа, покажу сумму и произведение этих чисел, твоя задача отгадать эти числа. Удачи!");
+                Console.WriteLine("Hello, " + name + "!");
+                Console.WriteLine("I’ll guess three integers now, show the sum and product of these numbers, your task is to guess these numbers. Good luck!");
                 Random rnd = new Random();
 
 
-                int value1 = rnd.Next(2, 7);
-                int value2 = rnd.Next(2, 7);
-                int value3 = rnd.Next(2, 7);
+                int value1 = rnd.Next(2, 8);
+                int value2 = rnd.Next(2, 8);
+                int value3 = rnd.Next(2, 8);
 
-                //Console.WriteLine(value1); 
-                //Console.WriteLine(value2);
-                //Console.WriteLine(value3);
 
                 var sum = value1 + value2 + value3;
                 var product = value1 * value2 * value3;
 
-                Console.WriteLine(sum + " - сумма трех чисел");
-                Console.WriteLine(product + " - произведение трех чисел");
+                Console.WriteLine(sum + " - sum of three numbers");
+                Console.WriteLine(product + " - product of three numbers");
 
                 
 
-                int userValue1; //первое число которое вводит пользователь
-                int userValue2;// второе число которое вводит пользователь
-                int userValue3;//третье число которое вводит пользователь
+                int userValue1; 
+                int userValue2;
+                int userValue3;
 
 
 
-                Console.WriteLine("Введите загаданные числа в диапозоне от 2 до 7");
+                Console.WriteLine("Enter the desired numbers in the range from 2 to 7");
                 userValue1 = Convert.ToInt32(Console.ReadLine());
                 userValue2 = Convert.ToInt32(Console.ReadLine());
                 userValue3 = Convert.ToInt32(Console.ReadLine());
@@ -52,16 +49,16 @@ namespace LearnCsharp
 
                 if (sumUser == sum || product == productUser)
                 {
-                    Console.WriteLine("Ты победил! Ваще Красава! Респектос!");
+                    Console.WriteLine("You won! Respect!");
                 }
 
                 else
                 {
-                    Console.WriteLine("Не повезло, пробуй ещё раз");
-                    Console.WriteLine("1 число было загадано - "+value1); 
-                    Console.WriteLine("2 число было загадано - "+value2);
-                    Console.WriteLine("3 число было загадано - "+value3);
-                    Console.WriteLine("Тыкай Enter, чтобы попытать счастье ещё раз!");
+                    Console.WriteLine("No luck, try again");
+                    Console.WriteLine("1 number was made up - "+value1); 
+                    Console.WriteLine("2 number was made up - " + value2);
+                    Console.WriteLine("3 number was made up - " + value3);
+                    Console.WriteLine("Press Enter to try again...");
                 }
 
 
