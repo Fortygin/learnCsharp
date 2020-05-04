@@ -40,9 +40,14 @@ namespace LearnCsharp
 
 
                 Console.WriteLine("Enter the desired numbers in the range from 2 to 7");
-                userValue1 = Convert.ToInt32(Console.ReadLine());
-                userValue2 = Convert.ToInt32(Console.ReadLine());
-                userValue3 = Convert.ToInt32(Console.ReadLine());
+
+                string Value1 = Console.ReadLine();
+                int.TryParse(Value1, out userValue1);
+                string Value2 = Console.ReadLine();
+                int.TryParse(Value2, out userValue2);
+                string Value3 = Console.ReadLine();
+                int.TryParse(Value3, out userValue3);
+
 
                 var sumUser = userValue1 + userValue2 + userValue3;
                 var productUser = userValue1 * userValue2 * userValue3;
