@@ -22,12 +22,13 @@ namespace LearnCsharp
           
         static void Main(string[] args)
         {
-            
+            string PlayerName = GetPlayerName();
+
             while (true)
             {
 
-                Console.Clear();
-                string PlayerName = GetPlayerName();
+                
+                
                 Random rnd = new Random();
 
 
@@ -69,13 +70,17 @@ namespace LearnCsharp
                
                 if (ContinueGame() == true)
                 {
+                    Console.Clear();
                     continue;
                 }
                 else
                 {
                     Console.WriteLine("Thanks for playing! Bye!");
+                    Console.ReadKey();
+                    break;
+                    
                 }
-                Console.ReadKey();
+                
                 
 
 
