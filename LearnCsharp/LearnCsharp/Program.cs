@@ -14,7 +14,7 @@ namespace LearnCsharp
             Console.WriteLine("What is your name?");
             string name = Console.ReadLine();
             Console.WriteLine("Hello, " + name + "!");
-            Console.WriteLine("I’ll guess three integers now, show the sum and product of these numbers, your task is to guess these numbers. Good luck!");
+            Console.WriteLine("I’ll guess three integers now, show the sum and product of these numbers,\nyour task is to guess these numbers.\nGood luck!");
 
             return name;
         }
@@ -91,7 +91,7 @@ namespace LearnCsharp
         static bool ContinueGame()
         {
             
-            Console.WriteLine("What to continue the game? Choose your answer option 1 - YES! If you want to end the game, press any button");
+            Console.WriteLine("What to continue the game? Choose your answer option 1 - YES!\nIf you want to end the game, press any button");
 
             if (Console.ReadLine() == "1")
             {
