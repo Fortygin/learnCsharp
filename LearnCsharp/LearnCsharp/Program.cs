@@ -8,16 +8,24 @@ namespace LearnCsharp
 {
     class Program
     {
+        static string GetPlayerName()
+        {
+            
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello, " + name + "!");
+            Console.WriteLine("I’ll guess three integers now, show the sum and product of these numbers, your task is to guess these numbers. Good luck!");
 
+            return name;
+        }
+      
+          
         static void Main(string[] args)
         {
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("What is your name?");
-                var name = Console.ReadLine();
-                Console.WriteLine("Hello, " + name + "!");
-                Console.WriteLine("I’ll guess three integers now, show the sum and product of these numbers, your task is to guess these numbers. Good luck!");
+                string PlayerName = GetPlayerName();
                 Random rnd = new Random();
 
 
