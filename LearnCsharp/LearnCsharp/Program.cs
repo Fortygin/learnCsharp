@@ -32,15 +32,12 @@ namespace LearnCsharp
                 Console.WriteLine(sum + " - sum of three numbers");
                 Console.WriteLine(product + " - product of three numbers");
 
-
+                Console.WriteLine("Enter the desired numbers in the range from 2 to 7");
 
                 int userValue1 = GetUserInput();
                 int userValue2 = GetUserInput();
                 int userValue3 = GetUserInput();
 
-
-
-                Console.WriteLine("Enter the desired numbers in the range from 2 to 7");
 
                 var sumUser = userValue1 + userValue2 + userValue3;
                 var productUser = userValue1 * userValue2 * userValue3;
@@ -68,14 +65,14 @@ namespace LearnCsharp
 
         static int GetUserInput()
         {
-            int result = 0;
+            
 
             while (true)
             {
                 Console.WriteLine("Input a number from 2 to 7");
-                if (int.TryParse(Console.ReadLine(), out result))
+                if (int.TryParse(Console.ReadLine(), out int result))
                 {
-                    break;
+                    return result;
                 }
                 else
                 {
@@ -84,7 +81,7 @@ namespace LearnCsharp
                 }
             }
 
-            return result;
+            
             
         }
 
