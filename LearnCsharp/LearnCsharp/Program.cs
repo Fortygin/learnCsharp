@@ -64,10 +64,31 @@ namespace LearnCsharp
                     Console.WriteLine("Press Enter to try again...");
                 }
 
-
+               
+                if (ContinueGame() == "1")
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("Thanks for playing");
+                }
                 Console.ReadKey();
+                
+
 
             }
+
+        }
+
+        static string ContinueGame()
+        {
+            
+            string userAnswer;
+            Console.WriteLine("What to continue the game? Choose your answer option 1 - YES, 2 - NO");
+            userAnswer = Console.ReadLine();
+        
+            return userAnswer;
 
         }
 
