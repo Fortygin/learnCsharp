@@ -22,8 +22,10 @@ namespace LearnCsharp
           
         static void Main(string[] args)
         {
+            
             while (true)
             {
+
                 Console.Clear();
                 string PlayerName = GetPlayerName();
                 Random rnd = new Random();
@@ -65,13 +67,13 @@ namespace LearnCsharp
                 }
 
                
-                if (ContinueGame() == "1")
+                if (ContinueGame() == true)
                 {
                     continue;
                 }
                 else
                 {
-                    Console.WriteLine("Thanks for playing");
+                    Console.WriteLine("Thanks for playing! Bye!");
                 }
                 Console.ReadKey();
                 
@@ -81,14 +83,22 @@ namespace LearnCsharp
 
         }
 
-        static string ContinueGame()
+        static bool ContinueGame()
         {
             
-            string userAnswer;
-            Console.WriteLine("What to continue the game? Choose your answer option 1 - YES, 2 - NO");
-            userAnswer = Console.ReadLine();
+            Console.WriteLine("What to continue the game? Choose your answer option 1 - YES! If you want to end the game, press any button");
+
+            if (Console.ReadLine() == "1")
+            {
+                return true;
+            }
+            
+            else
+            {
+                return false;
+            }
         
-            return userAnswer;
+            
 
         }
 
