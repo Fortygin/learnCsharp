@@ -34,61 +34,13 @@ namespace LearnCsharp
 
 
 
-                int userValue1;
-                int userValue2;
-                int userValue3;
+                int userValue1 = GetUserInput();
+                int userValue2 = GetUserInput();
+                int userValue3 = GetUserInput();
 
 
 
                 Console.WriteLine("Enter the desired numbers in the range from 2 to 7");
-
-                string Value1 = Console.ReadLine();
-                int.TryParse(Value1, out userValue1);
-
-                bool resultValue1 = int.TryParse(Value1, out userValue1);
-                if (resultValue1)
-                {
-                    Console.WriteLine("success");
-                }
-                else
-                {
-                    Console.WriteLine("error");
-                    Console.WriteLine("Enter numbers! press any key to continue");
-                    Console.ReadKey();
-                    continue;
-                }
-                string Value2 = Console.ReadLine();
-                int.TryParse(Value2, out userValue2);
-
-                bool resultValue2 = int.TryParse(Value2, out userValue2);
-                if (resultValue2)
-                {
-                    Console.WriteLine("success");
-                }
-                else
-                {
-                    Console.WriteLine("error");
-                    Console.WriteLine("Enter numbers! press any key to continue");
-                    Console.ReadKey();
-                    continue;
-                }
-                string Value3 = Console.ReadLine();
-                int.TryParse(Value3, out userValue3);
-                bool resultValue3 = int.TryParse(Value2, out userValue2);
-                if (resultValue3)
-                {
-                    Console.WriteLine("success");
-                }
-                else
-                {
-                    Console.WriteLine("error");
-                    Console.WriteLine("Enter numbers! press any key to continue");
-                    Console.ReadKey();
-                    continue;
-                }
-
-
-
 
                 var sumUser = userValue1 + userValue2 + userValue3;
                 var productUser = userValue1 * userValue2 * userValue3;
@@ -114,6 +66,29 @@ namespace LearnCsharp
 
         }
 
-     
+        static int GetUserInput()
+        {
+            int result = 0;
+
+            while (true)
+            {
+                Console.WriteLine("Input a number from 2 to 7");
+                if (int.TryParse(Console.ReadLine(), out result))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Incorrect input");
+                    Console.WriteLine("Try again");
+                }
+            }
+
+            return result;
+            
+        }
+
+
+
     }
 }
